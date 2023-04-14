@@ -1,6 +1,4 @@
 import { Network, Alchemy, AlchemySettings } from "alchemy-sdk";
-import { NftType, OwndNftType } from '../Interfaces/nftType';
-import axios from 'axios';
 
 const settings: AlchemySettings = {
 	apiKey: 'u919UGCBA5ThYnLJaPwTJ45imyT_32uF',
@@ -10,7 +8,6 @@ const alchemy = new Alchemy(settings);
 
 export const getNfts = async (address: string) => {
 	const { ownedNfts } = await alchemy.nft.getNftsForOwner(address);
-	console.log(ownedNfts)
 	return {
 		nfts: ownedNfts,
 	};

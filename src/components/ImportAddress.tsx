@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { getNfts, getResponse } from '../services/Api';
-import { NftType, OwndNftType } from '../Interfaces/nftType';
+import { OwndNftType } from '../Interfaces/nftType';
 
 const ImportAddress = (props: any) => {
 	const [address, setAddress] = useState<string>('');
@@ -12,8 +12,6 @@ const ImportAddress = (props: any) => {
 		const _nfts = checkImageURL(nfts as any);
 
 		const data = await getResponse();
-		console.log("++++++++++++++++++++++++++++");
-		console.log(data);
 
 		props.setNFTs(_nfts);
 		e.preventDefault();

@@ -1,7 +1,6 @@
 import React from 'react';
 import './App.css';
 import Home from './pages/Home';
-import Popup from './components/Popup';
 
 function App() {
   return (
