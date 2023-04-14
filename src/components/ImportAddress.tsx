@@ -4,15 +4,10 @@ import { OwndNftType } from '../Interfaces/nftType';
 
 const ImportAddress = (props: any) => {
 	const [address, setAddress] = useState<string>('');
-	const [nfts, setNFTs] = useState<OwndNftType[]>([]);
-
 
 	const handleSubmit = async (e: any) => {
 		const { nfts } = await getNfts(address);
 		const _nfts = checkImageURL(nfts as any);
-
-		const data = await getResponse();
-
 		props.setNFTs(_nfts);
 		e.preventDefault();
 	}
