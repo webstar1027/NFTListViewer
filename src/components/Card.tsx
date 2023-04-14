@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Popup from "./Popup";
 import ModalBox from "./ModalBox";
 import { NFTItemType } from "../Interfaces/nftType";
 
